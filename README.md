@@ -1,2 +1,2 @@
 # Python
-A collection of class projects and practice exercises written in Python.
+A collection of coursework and practice exercises written in Python.
