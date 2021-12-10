@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>The Star Gazer - Sign Up</title>
+  </head>
+  <body>
+    <!-- Header at top of page -->
+    <div>
+      <h1 class="main">The Star Gazer</h1>
+      <h3 class="main">Sign up to view NASA's Picture of the Day!</h3>
+    </div>
+
+
+    <div class="main">
+      <button class="btn-login" onclick="window.location.href='login';">Already registered? Log In!</button>
+    </div>
+
+    <form class="main" method="POST">
+
+      <div>
+
+        <form action="/login" method="POST">
+
+          <label for="fname">First Name</label><br>
+          <input type="text" id="fname" placeholder="Enter first name" name="first_name" required><br><br>
+          <label for="lname">Last Name</label><br>
+          <input type="text" id="lname" placeholder="Enter last name" name="last_name" required><br><br>
+          <label for="username">Username</label><br>
+          <input type="text" id="username" placeholder="Enter Username" name="username" required><br><br>
+          <label for="password">Password</label><br>
+          <input type="text" id="password" placeholder="Enter Password" name="password" required><br><br>
+          <p>Password must be at least 6 characters in length, and include at least 1 uppercase character, 1
+                  lowercase character, 1 number and 1 special character.</p>
+          <button class="btn-signup" type="submit"><strong>Sign Up</strong></button>
+
+        </form>
+
+        <div class="main">
+          {% if msg %}
+              <h3 style="color :red; ">{{ msg }}</h3>
+          {% endif %}
+        </div>
+
+      </div>
+
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+  </body>
+  <style>
+    body {
+      background-image: url("https://d3octkd2uqmyim.cloudfront.net/media/bi/33264/starry-sky-wallpaper-2x.jpg?q=1618338128");
+    }
+    .main {
+      color: white;
+      margin: 50px;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-signup {
+      background: #3755b8;
+      color: white;
+      padding: 20px 50px;
+      border: none;
+      font-size: 25px;
+    }
+
+    .btn-signup:hover {
+      background: #c9fff7;
+      color: #4c68c7;
+    }
+
+    .btn-login {
+      background: #4cc783;
+      color: #3b12a3;
+      border: none;
+      padding: 15px 45px;
+      font-size: 20px;
+    }
+
+    .btn-login:hover {
+      background: #c9fff7;
+      color: #4c68c7;
+    }
+
+  </style>
+
+</html>
